@@ -1,5 +1,6 @@
 import React from "react";
 import Particles from "react-tsparticles";
+import { Link } from "react-router-dom";
 
 const loginPage = () => {
   const particlesInit = (main) => {
@@ -16,7 +17,7 @@ const loginPage = () => {
           <div className="box-root box-root-inner padding-top--24 flex-flex flex-direction--column">
             <div className="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
               <h1>
-                <a href="#" rel="dofollow">
+                <a href="#" rel="dofollow" className="title-loginPage">
                   Bet fire
                 </a>
               </h1>
@@ -60,7 +61,10 @@ const loginPage = () => {
               </div>
               <div className="footer-link padding-top--24">
                 <span>
-                  Don't have an account? <a href="">Sign up</a>
+                  Don't have an account?{" "}
+                  <Link to="/home" className="signUp-loginPage">
+                    Sign up
+                  </Link>
                 </span>
                 <div className="listing padding-top--24 padding-bottom--24 flex-flex center-center">
                   <span>
